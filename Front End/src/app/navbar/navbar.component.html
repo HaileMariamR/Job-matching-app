@@ -1,0 +1,19 @@
+<mat-toolbar class="mat-elevation-z8">
+  <span><mat-icon>eco</mat-icon> Jobs</span>
+  <div class="spacer"></div>
+  <a mat-button *ngIf="!_authService.loggedIn()" routerLink="/home" routerLinkActive='active'>Home</a>
+  <a mat-button *ngIf="_authService.loggedIn() && _authService.isApplicants()" routerLink="/AllJobs">All Jobs</a>
+  <a mat-button *ngIf="!_authService.loggedIn()" routerLink="/employeeLogin">Login</a>
+  <a mat-raised-button *ngIf="!_authService.loggedIn()" routerLink="/register" color="darken">Register</a>
+  <a mat-button *ngIf="_authService.loggedIn() && !_authService.isApplicants()" routerLink="/addJob">AddJob</a>
+  <a mat-button *ngIf="_authService.loggedIn() && !_authService.isApplicants()" routerLink="/employeeLogin/{{_authService.getToken()}}">AppDashboard</a>
+  <!-- My applications is for applicants -->
+  <a mat-button *ngIf="_authService.loggedIn()" routerLink="/Applicant/{{_authService.getToken()}}">MyApplications</a>
+  <button mat-button *ngIf="_authService.loggedIn()" [matMenuTriggerFor]="menu">{{_authService.getToken()}}</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item> <a mat-button *ngIf="_authService.loggedIn()">{{_authService.getToken()}}</a></button>
+    <button mat-menu-item> <a mat-raised-button *ngIf="_authService.loggedIn()" (click)="_authService.LogOutUser()" routerLink="/register" color="darken">LogOut</a>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+

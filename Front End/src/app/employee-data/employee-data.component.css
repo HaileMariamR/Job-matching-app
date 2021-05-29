@@ -1,0 +1,14 @@
+.example-form {
+    margin-left: 100px;
+    min-width: 150px;
+    max-width: 50%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  div {
+    float: right;
+  }
+  
