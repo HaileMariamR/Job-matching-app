@@ -1,0 +1,89 @@
+<!-- <mat-carousel
+timings="250ms ease-in"
+[autoplay]="true"
+[interval]="5000"
+color="accent"
+maxWidth="auto"
+[proportion]= "25"
+[slides]="5"
+[loop]="true"
+[hideArrows]="false"
+[hideIndicators]="false"
+[useKeyboard]="true"
+[useMouseWheel]="false"
+orientation="ltr"
+>
+<mat-carousel-slide
+  #matCarouselSlide
+  *ngFor="let slide of slidess; let i = index"
+  [image]="slide.image"
+  overlayColor="#00000040"
+  [hideOverlay]="false"
+>
+<div
+style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center"
+>
+<h1 style="color: white;">Better Job. Better Talent </h1>
+<h3 style="color:aliceblue">Let Employers Find You</h3>
+</div>
+</mat-carousel-slide>
+</mat-carousel>
+ -->
+
+
+ <mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <mat-sidenav-container>
+            <mat-sidenav>Start</mat-sidenav>
+            <mat-sidenav-content>side nav</mat-sidenav-content>
+          </mat-sidenav-container>
+        </mat-list-item>
+
+      </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      All jobs
+    <mat-grid-list style = "margin-top: 40px;" cols="1" rowHeight="350px">
+    <mat-grid-tile *ngFor="let job of jobs">
+
+
+    <div class="container">
+
+      <div class="section">
+        <h1></h1>
+        <!--   Icon Section   -->
+        <div class="row">
+          <div class="col" style="max-width: 1000px;">
+            <mat-card class="my-card">
+              <mat-card-title>Project Quality Engineer <span class="posted_date">Posted: {{job.posted_date}} </span></mat-card-title>
+              <mat-card-content>
+                <div class="icon-block">
+                    <p>
+                      The Shiba Inu is the smallest of the six native Dog breeds: Akita, Kishu, Hokkaido, Kai, Shikoku, and Shiba.
+                      Shiba is a small, agile dog that copes very well with mountainous terrain, the Shiba Inu is originally
+                      bred for hunting.
+                    </p>
+                  <h5>Category: {{job.name}} </h5>
+                  <p>Location: {{ job.location }}</p>
+                  <p>Career-Level: {{ job.career_level }}</p>
+                  <p>Employement Type: {{job.employment_type}} </p>
+                  <p>Posted by: {{ job.posted_by }} <span><button routerLink="/AllJobs/{{job.jobId}}" mat-stroked-button color="accent" style="float: right; margin-right: 10px;">See Detail</button></span> </p>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+      <br><br>
+    </div>
+
+    </mat-grid-tile>
+  </mat-grid-list>
+  </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+
+
