@@ -1,0 +1,78 @@
+<div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh">
+    <div fxLayout="row wrap">
+      
+  
+    <div
+          fxFlex="100"
+          fxFlex.md="100"
+          fxFlex.sm="100"
+          fxFlex.xs="100"
+          fxLayout="column"
+          style="height: 40vh; z-index: 10;">
+          <mat-card class="mat-elevation-z0 outline">
+          <mat-card-content class="sect1"> 
+             
+          <!-- Add new Job part starts here -->
+          <div>
+            <button style="margin-top: 15px" (click)="isShown = !isShown" mat-raised-button color="accent">{{isShown === false? 'Apply': 'Apply'}} Now</button>
+            <br/>
+            <br/>
+            <form #someForm="ngForm" class="example-form" *ngIf="isShown">
+              <mat-form-field class="example-full-width">
+                <input 
+                matInput placeholder="Your name" 
+                required
+                minlength="6"
+                name="applicantName"
+                ngModel
+                #applicantName="ngModel"
+                [(ngModel)]="ApplyNowData.applicantName"
+                >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input 
+                matInput placeholder="Your name" 
+                required
+                minlength="6"
+                name="applicationName"
+                ngModel
+                #applicationName="ngModel"
+                [(ngModel)]="ApplyNowData.applicationName"
+                >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input 
+                matInput placeholder="Tell us about yourself" 
+                required
+                minlength="6"
+                name="description"
+                ngModel
+                #description="ngModel"
+                [(ngModel)]="ApplyNowData.description"
+                >
+              </mat-form-field>
+
+              <button (click)="Apply()"  mat-raised-button color="primary">Apply</button>
+            </form>   
+            </div>
+            <!-- Add new job part ends here -->
+          </mat-card-content>
+      </mat-card>
+    </div>
+    </div>
+  </div>
+  <!-- the second row starts here -->
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
