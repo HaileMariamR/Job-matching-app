@@ -1,0 +1,83 @@
+.example-card {
+    max-width: 400px;
+  }
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ /* for the scrollable */
+ .example-viewport {
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.example-item {
+  height: 50px;
+}
+mat-sidenav mat-list{
+  margin-top: 120px;
+}
+/* The scrollable ends here */
+
+/* ends here man */
+ .icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 250px;
+}
+/* This is for the carousel start */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+}
+
+.navigation-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.icon {
+  display: inline-block;
+  height: 30px;
+  margin: 0 auto;
+  padding-right: 5px;
+  text-align: center;
+  vertical-align: middle;
+  width: 15%;
+}
+
+.label {
+  display: inline-block;
+  line-height: 30px;
+  margin: 0;
+  width: 85%;
+}
+h3{
+  margin-left: 100px;
+}
+/* End of the carousel at the job */
