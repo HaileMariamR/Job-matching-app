@@ -29,7 +29,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ApplyNowComponent } from './apply-now/apply-now.component';
 import { JobStatusComponent } from './job-status/job-status.component';
 import { ApplicationDashboardComponent } from './application-dashboard/application-dashboard.component';
-import { MyApplicationsComponent } from './my-applications/my-applications.component';
 
 
 @NgModule({
@@ -51,7 +50,6 @@ import { MyApplicationsComponent } from './my-applications/my-applications.compo
     ApplyNowComponent,
     JobStatusComponent,
     ApplicationDashboardComponent,
-    MyApplicationsComponent,
   ],
   imports: [
     BrowserModule,

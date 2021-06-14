@@ -13,7 +13,6 @@ import { HiringManagerComponent } from './hiring-manager/hiring-manager.componen
 import { HomeComponent } from './home/home.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { JobStatusComponent } from './job-status/job-status.component';
-import { MyApplicationsComponent } from './my-applications/my-applications.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes =[
@@ -29,8 +28,7 @@ const routes: Routes =[
   {path:"App-Dashboard" , component:ApplicationDashboardComponent},
   {path: "employeeLogin/:id", component: AppDashboardComponent},
   {path: "AllJobs/:id/ApplyNow", component: ApplyNowComponent},
-  {path: "JobStatus", component: JobStatusComponent},
-  {path: "Applicant/:email", component: MyApplicationsComponent},
+  {path: "JobStatus", component: JobStatusComponent}
 
 
 

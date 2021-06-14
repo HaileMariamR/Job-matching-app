@@ -1,0 +1,161 @@
+<div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh">
+  <div fxLayout="row wrap">
+    
+
+  <div
+        fxFlex="100"
+        fxFlex.md="100"
+        fxFlex.sm="100"
+        fxFlex.xs="100"
+        fxLayout="column"
+        style="height: 40vh; z-index: 10;">
+        <mat-card class="mat-elevation-z0 outline">
+        <mat-card-content class="sect1"> 
+           
+        <!-- Add new Job part starts here -->
+        <div>
+          <button style="margin-top: 15px" (click)="isShown = !isShown" mat-raised-button color="accent">{{isShown === false? 'Add': 'Add'}} Jobs</button>
+          <br/>
+          <br/>
+          <form #someForm="ngForm" class="example-form" *ngIf="isShown">
+            <mat-form-field class="example-full-width">
+              <input 
+              matInput placeholder="Name of the job" 
+              required
+              minlength="6"
+              name="name"
+              ngModel
+              #name="ngModel"
+              [(ngModel)]="addJobData.name"
+              >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input 
+              matInput placeholder="Posted by" 
+              required
+              minlength="6"
+              name="posted_by"
+              ngModel
+              #posted_by="ngModel"
+              [(ngModel)]="addJobData.posted_by"
+              >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input 
+              matInput placeholder="category of the job" 
+              required
+              minlength="6"
+              name="category"
+              ngModel
+              #category="ngModel"
+              [(ngModel)]="addJobData.category"
+              >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input 
+              matInput placeholder="location of the job" 
+              required
+              minlength="6"
+              name="location"
+              ngModel
+              #lacation="ngModel"
+              [(ngModel)]="addJobData.location"
+              >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input 
+              matInput placeholder="carear level of the job" 
+              required
+              minlength="6"
+              name="career_level"
+              ngModel
+              #career_level="ngModel"
+              [(ngModel)]="addJobData.career_level"
+              >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input 
+              matInput placeholder="employment_type the job" 
+              required
+              minlength="6"
+              name="employment_type"
+              ngModel
+              #employment_type="ngModel"
+              [(ngModel)]="addJobData.employment_type"
+              >
+            </mat-form-field>
+            <!-- <mat-form-field class="example-full-width">
+              <input type="number" matInput placeholder="eligible people" value="0"
+              ngModel name="cost">
+            </mat-form-field> -->
+            <!-- <mat-form-field appearance="fill">
+              <mat-label>Select an option</mat-label>
+              <mat-select>
+                <mat-option>None</mat-option>
+                <mat-option value="Engineers">Engineers</mat-option>
+                <mat-option  value="Health science">Health science</mat-option>
+                <mat-option value="Medical">Medical</mat-option>
+              </mat-select>
+            </mat-form-field> -->
+          
+            
+          <mat-form-field class="example-full-width">
+              <mat-label>Leave a Description</mat-label>
+              <textarea
+               matInput placeholder="Ex. This is the discription"
+               required
+               minlength="6"
+               name="description"
+               ngModel
+               #description="ngModel"
+               [(ngModel)]="addJobData.description"
+              ></textarea>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Leave a Description</mat-label>
+            <textarea
+             matInput placeholder="This is the job requirment"
+             required
+             minlength="6"
+             name="job_requirements"
+             ngModel
+             #job_requirements="ngModel"
+             [(ngModel)]="addJobData.job_requirements"
+            ></textarea>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input 
+          matInput placeholder="pposted by the job" 
+          required
+          minlength="6"
+          name="posted_by"
+          ngModel
+          #posted_by="ngModel"
+          [(ngModel)]="addJobData.posted_by"
+          >
+        </mat-form-field>
+        
+              
+            <button (click)="AddJobs()"  mat-raised-button color="primary">Add</button>
+          </form>   
+          </div>
+          <!-- Add new job part ends here -->
+        </mat-card-content>
+    </mat-card>
+  </div>
+  </div>
+</div>
+<!-- the second row starts here -->
+
+
+  
+
+
+
+
+
+
+
+
+
+
